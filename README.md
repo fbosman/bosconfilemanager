@@ -68,7 +68,13 @@ Home > Instellingen > Modules > BosConfilemanager:
 
 ## Installatie
 
-Kopieer de map naar `htdocs/custom/bosconfilemanager` (of upload de ZIP `module_bosconfilemanager-1.0.0.zip`
-via Home > Instellingen > Modules > Externe module installeren) en activeer de module. De webserver moet
+Upload `bin/module_bosconfilemanager-1.0.0.zip` via Home > Instellingen > Modules > Externe module
+installeren (of kopieer de map naar `htdocs/custom/bosconfilemanager`) en activeer de module. De webserver moet
 schrijfrechten hebben op de bestanden die je wilt bewerken; de verkenner toont welke bestanden en mappen
 alleen-lezen zijn.
+
+## Zip bouwen
+
+`build/makezip.sh` maakt `bin/module_bosconfilemanager-<versie>.zip` (versie uit de moduledescriptor) volgens
+de Dolibarr-naamgeving: `module_<modulenaam>-<versie>.zip` met de map `bosconfilemanager/` in de root. Het
+script pakt de laatste commit in; ontwikkelbestanden (`CLAUDE.md`, `build/`, `bin/`) blijven buiten de zip.
