@@ -1,0 +1,107 @@
+# BosConfilemanager - nl_NL (leidend)
+
+#
+# Module
+#
+ModuleBosConfilemanagerName = BosConfilemanager
+Module450170Name = BosConfilemanager
+Module450170Desc = Verkenner voor de bestanden van de Dolibarr-installatie: bekijken, bewerken, uploaden en downloaden
+BosConfilemanagerName = BosConfilemanager
+BosConfilemanagerDescription = Verkenner voor de bestanden van de Dolibarr-installatie: bekijken, bewerken, uploaden en downloaden
+BosConfilemanagerDescriptionLong = Blader door alle bestanden onder de Dolibarr-root, bekijk en bewerk ze met syntax highlighting, upload en download bestanden en mappen (ZIP), maak, hernoem en verwijder bestanden en mappen. Alleen voor beheerders. Elke wijziging maakt eerst een backup.
+BosConfilemanagerMenu = Bestandsbeheer
+Permission45017001 = Bestanden van de Dolibarr-installatie bekijken en downloaden
+Permission45017002 = Bestanden en mappen uploaden, bewerken, aanmaken en hernoemen
+Permission45017003 = Bestanden en mappen verwijderen
+
+#
+# Setup
+#
+BosConfilemanagerSetup = Instellingen BosConfilemanager
+BosConfilemanagerSetupPage = De bestandsbeheerder werkt altijd vanuit de Dolibarr-root: <b>%s</b>. Alleen beheerders met de rechten van deze module kunnen hem gebruiken.
+BOSCONFILEMANAGER_BACKUP_ON_SAVE = Backup maken bij opslaan, overschrijven en verwijderen
+BOSCONFILEMANAGER_BACKUP_ON_SAVETooltip = Voordat een bestand wordt opgeslagen, overschreven door een upload, teruggezet of verwijderd, wordt een kopie bewaard in de documentenmap. Vanuit de editor kun je een backup terugzetten.
+BOSCONFILEMANAGER_SHOW_HIDDEN = Verborgen bestanden tonen
+BOSCONFILEMANAGER_SHOW_HIDDENTooltip = Bestanden en mappen waarvan de naam met een punt begint (bijv. .htaccess).
+BOSCONFILEMANAGER_PHP_SYNTAX_CHECK = PHP-syntax controleren bij opslaan
+BOSCONFILEMANAGER_PHP_SYNTAX_CHECKTooltip = Een PHP-bestand met een syntaxfout wordt niet opgeslagen (tenzij je dat bevestigt). Zo voorkom je dat Dolibarr door een tikfout onbereikbaar wordt.
+BOSCONFILEMANAGER_MAX_EDIT_SIZE = Maximale grootte om te bewerken
+BOSCONFILEMANAGER_MAX_EDIT_SIZETooltip = Grotere bestanden kun je alleen downloaden.
+BOSCONFILEMANAGER_EDITOR_THEME = Thema van de editor
+BcfmBackups = Backups
+BcfmBackupCount = Aantal backups
+BcfmPurgeBackups = Alle backups verwijderen
+BcfmConfirmPurgeBackups = Weet je zeker dat je alle backups wilt verwijderen? Dit kan niet ongedaan worden gemaakt.
+BcfmBackupsPurged = Alle backups zijn verwijderd
+
+#
+# Explorer
+#
+BcfmRoot = Dolibarr-root
+BcfmUp = Omhoog
+BcfmNewDir = Nieuwe map
+BcfmNewDirIn = Nieuwe map maken in %s
+BcfmNewDirName = Naam van de map
+BcfmNewFile = Nieuw bestand
+BcfmNewFileIn = Nieuw bestand maken in %s
+BcfmNewFileName = Naam van het bestand
+BcfmNewName = Nieuwe naam
+BcfmConfirmRename = Nieuwe naam voor <b>%s</b>:
+BcfmConfirmDeleteFile = Weet je zeker dat je het bestand <b>%s</b> wilt verwijderen?
+BcfmConfirmDeleteDir = Weet je zeker dat je de map <b>%s</b> met de volledige inhoud wilt verwijderen? Van mappen wordt geen backup gemaakt.
+BcfmDownloadZip = Downloaden als ZIP
+BcfmOverwrite = Bestaande bestanden overschrijven
+BcfmDropHint = Of sleep bestanden naar de lijst
+BcfmMaxSize = maximaal %s
+BcfmFilter = Filter op naam...
+BcfmPermissions = Rechten
+BcfmWritable = Schrijfbaar voor de webserver
+BcfmReadOnly = Alleen-lezen voor de webserver
+BcfmDirNotWritable = De webserver kan niet schrijven in deze map: uploaden, aanmaken, hernoemen en verwijderen werken hier niet.
+BcfmEmptyDir = Deze map is leeg
+BcfmSummary = %s mappen, %s bestanden, %s
+BcfmView = Bekijken
+BcfmUploaded = %s bestand(en) geüpload
+BcfmDirCreated = Map %s aangemaakt
+BcfmRenamed = %s hernoemd naar %s
+BcfmDeleted = %s verwijderd
+
+#
+# Editor
+#
+BcfmBackToFolder = Naar de map
+BcfmSaveHint = Ctrl+S om op te slaan
+BcfmSaved = %s opgeslagen
+BcfmNoChange = Er is niets gewijzigd
+BcfmForceSave = Toch opslaan en de nieuwere versie overschrijven
+BcfmIgnoreSyntax = Toch opslaan met syntaxfout
+BcfmEncodingLatin1 = Dit bestand is niet in UTF-8 en wordt als ISO-8859-1 opgeslagen.
+BcfmTooLargeToEdit = Dit bestand is groter dan %s en kan alleen gedownload worden (zie de instellingen van de module).
+BcfmBinaryFile = Dit is een binair bestand. Je kunt het downloaden of vervangen door een nieuwe upload.
+BcfmRestore = Terugzetten
+BcfmConfirmRestore = Weet je zeker dat je de backup van %s wilt terugzetten? Van de huidige versie wordt eerst een backup gemaakt.
+BcfmRestored = Backup van %s teruggezet
+BcfmConfirmDeleteBackup = Weet je zeker dat je de backup van %s wilt verwijderen?
+BcfmBackupDeleted = Backup verwijderd
+
+#
+# Errors
+#
+BcfmErrorPathNotFound = Bestand of map niet gevonden of buiten de Dolibarr-root: %s
+BcfmErrorBadName = Ongeldige naam: %s
+BcfmErrorExists = Er bestaat al een bestand of map met de naam %s
+BcfmErrorNoFileSelected = Kies eerst een of meer bestanden
+BcfmErrorUpload = Upload mislukt (foutcode %s)
+BcfmErrorWrite = Kan niet schrijven naar %s (controleer de bestandsrechten)
+BcfmErrorDelete = Kan %s niet verwijderen (controleer de bestandsrechten)
+BcfmErrorRead = Kan de map %s niet lezen
+BcfmErrorBackup = Kan geen backup maken van %s, de wijziging is niet uitgevoerd
+BcfmErrorConflict = Het bestand is gewijzigd sinds je het opende. Jouw versie staat nog in de editor; vink "Toch opslaan" aan om de nieuwere versie te overschrijven.
+BcfmErrorPhpSyntax = Niet opgeslagen, PHP-syntaxfout: %s
+
+#
+# Core strings missing in older versions
+#
+Rename = Hernoemen
+Create = Aanmaken
+Directory = Map

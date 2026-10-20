@@ -1,0 +1,107 @@
+# BosConfilemanager - en_US
+
+#
+# Module
+#
+ModuleBosConfilemanagerName = BosConfilemanager
+Module450170Name = BosConfilemanager
+Module450170Desc = Explorer for the files of the Dolibarr installation: view, edit, upload and download
+BosConfilemanagerName = BosConfilemanager
+BosConfilemanagerDescription = Explorer for the files of the Dolibarr installation: view, edit, upload and download
+BosConfilemanagerDescriptionLong = Browse all files below the Dolibarr root, view and edit them with syntax highlighting, upload and download files and directories (ZIP), create, rename and delete files and directories. Administrators only. Every change makes a backup first.
+BosConfilemanagerMenu = File manager
+Permission45017001 = View and download files of the Dolibarr installation
+Permission45017002 = Upload, edit, create and rename files and directories
+Permission45017003 = Delete files and directories
+
+#
+# Setup
+#
+BosConfilemanagerSetup = BosConfilemanager setup
+BosConfilemanagerSetupPage = The file manager always works from the Dolibarr root: <b>%s</b>. Only administrators with the rights of this module can use it.
+BOSCONFILEMANAGER_BACKUP_ON_SAVE = Make a backup when saving, overwriting and deleting
+BOSCONFILEMANAGER_BACKUP_ON_SAVETooltip = Before a file is saved, overwritten by an upload, restored or deleted, a copy is kept in the documents directory. Backups can be restored from the editor.
+BOSCONFILEMANAGER_SHOW_HIDDEN = Show hidden files
+BOSCONFILEMANAGER_SHOW_HIDDENTooltip = Files and directories whose name starts with a dot (e.g. .htaccess).
+BOSCONFILEMANAGER_PHP_SYNTAX_CHECK = Check PHP syntax when saving
+BOSCONFILEMANAGER_PHP_SYNTAX_CHECKTooltip = A PHP file with a syntax error is not saved (unless you confirm). This prevents a typo from taking Dolibarr down.
+BOSCONFILEMANAGER_MAX_EDIT_SIZE = Maximum size to edit
+BOSCONFILEMANAGER_MAX_EDIT_SIZETooltip = Larger files can only be downloaded.
+BOSCONFILEMANAGER_EDITOR_THEME = Editor theme
+BcfmBackups = Backups
+BcfmBackupCount = Number of backups
+BcfmPurgeBackups = Delete all backups
+BcfmConfirmPurgeBackups = Are you sure you want to delete all backups? This cannot be undone.
+BcfmBackupsPurged = All backups have been deleted
+
+#
+# Explorer
+#
+BcfmRoot = Dolibarr root
+BcfmUp = Up
+BcfmNewDir = New directory
+BcfmNewDirIn = Create a new directory in %s
+BcfmNewDirName = Directory name
+BcfmNewFile = New file
+BcfmNewFileIn = Create a new file in %s
+BcfmNewFileName = File name
+BcfmNewName = New name
+BcfmConfirmRename = New name for <b>%s</b>:
+BcfmConfirmDeleteFile = Are you sure you want to delete the file <b>%s</b>?
+BcfmConfirmDeleteDir = Are you sure you want to delete the directory <b>%s</b> and all of its content? Directories are not backed up.
+BcfmDownloadZip = Download as ZIP
+BcfmOverwrite = Overwrite existing files
+BcfmDropHint = Or drop files onto the list
+BcfmMaxSize = max %s
+BcfmFilter = Filter by name...
+BcfmPermissions = Permissions
+BcfmWritable = Writable by the web server
+BcfmReadOnly = Read-only for the web server
+BcfmDirNotWritable = The web server cannot write in this directory: upload, create, rename and delete will not work here.
+BcfmEmptyDir = This directory is empty
+BcfmSummary = %s directories, %s files, %s
+BcfmView = View
+BcfmUploaded = %s file(s) uploaded
+BcfmDirCreated = Directory %s created
+BcfmRenamed = %s renamed to %s
+BcfmDeleted = %s deleted
+
+#
+# Editor
+#
+BcfmBackToFolder = To the directory
+BcfmSaveHint = Ctrl+S to save
+BcfmSaved = %s saved
+BcfmNoChange = Nothing was changed
+BcfmForceSave = Save anyway and overwrite the newer version
+BcfmIgnoreSyntax = Save anyway with syntax error
+BcfmEncodingLatin1 = This file is not UTF-8 and is saved as ISO-8859-1.
+BcfmTooLargeToEdit = This file is larger than %s and can only be downloaded (see the module setup).
+BcfmBinaryFile = This is a binary file. You can download it or replace it with a new upload.
+BcfmRestore = Restore
+BcfmConfirmRestore = Are you sure you want to restore the backup of %s? A backup of the current version is made first.
+BcfmRestored = Backup of %s restored
+BcfmConfirmDeleteBackup = Are you sure you want to delete the backup of %s?
+BcfmBackupDeleted = Backup deleted
+
+#
+# Errors
+#
+BcfmErrorPathNotFound = File or directory not found or outside the Dolibarr root: %s
+BcfmErrorBadName = Invalid name: %s
+BcfmErrorExists = A file or directory named %s already exists
+BcfmErrorNoFileSelected = Select one or more files first
+BcfmErrorUpload = Upload failed (error code %s)
+BcfmErrorWrite = Cannot write to %s (check the file permissions)
+BcfmErrorDelete = Cannot delete %s (check the file permissions)
+BcfmErrorRead = Cannot read the directory %s
+BcfmErrorBackup = Cannot make a backup of %s, the change was not made
+BcfmErrorConflict = The file was changed since you opened it. Your version is still in the editor; tick "Save anyway" to overwrite the newer version.
+BcfmErrorPhpSyntax = Not saved, PHP syntax error: %s
+
+#
+# Core strings missing in older versions
+#
+Rename = Rename
+Create = Create
+Directory = Directory

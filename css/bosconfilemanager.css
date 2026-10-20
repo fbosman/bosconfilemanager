@@ -1,0 +1,179 @@
+/* BosConfilemanager */
+
+.bcfm-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin-bottom: 10px;
+}
+.bcfm-breadcrumb {
+	font-size: 1.1em;
+	word-break: break-all;
+}
+.bcfm-breadcrumb .bcfm-sep {
+	padding: 0 4px;
+	opacity: 0.5;
+}
+.bcfm-buttons .butAction {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.bcfm-layout {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+}
+.bcfm-tree {
+	flex: 0 0 260px;
+	max-height: calc(100vh - 220px);
+	overflow: auto;
+	position: sticky;
+	top: 60px;
+	padding: 6px 4px;
+	border: 1px solid var(--colortopbordertitle1, #ddd);
+	border-radius: 4px;
+	white-space: nowrap;
+}
+.bcfm-main {
+	flex: 1 1 auto;
+	min-width: 0;
+	border-radius: 4px;
+}
+.bcfm-main.bcfm-dragover {
+	outline: 2px dashed var(--colortextlink, #0a52a3);
+	outline-offset: 4px;
+}
+
+/* Tree */
+.bcfm-treelist {
+	list-style: none;
+	margin: 0;
+	padding-left: 14px;
+}
+.bcfm-tree > .bcfm-treelist {
+	padding-left: 0;
+}
+.bcfm-node > .bcfm-treelist {
+	display: none;
+}
+.bcfm-node.bcfm-open > .bcfm-treelist {
+	display: block;
+}
+.bcfm-node > a {
+	display: inline-block;
+	padding: 1px 3px;
+	border-radius: 3px;
+}
+.bcfm-node > a.bcfm-current {
+	font-weight: bold;
+	background: var(--colorbacklinepairhover, #eef);
+}
+.bcfm-toggle {
+	display: inline-block;
+	width: 14px;
+	cursor: pointer;
+	text-align: center;
+	opacity: 0.6;
+}
+.bcfm-toggle::before {
+	content: "\25B8";
+}
+.bcfm-open > .bcfm-toggle::before {
+	content: "\25BE";
+}
+.bcfm-leaf > .bcfm-toggle {
+	cursor: default;
+}
+.bcfm-leaf > .bcfm-toggle::before {
+	content: "";
+}
+.bcfm-loading > .bcfm-toggle {
+	opacity: 0.2;
+}
+.bcfm-diricon {
+	color: #d8a03a;
+}
+
+/* Upload and filter */
+.bcfm-upload {
+	margin-bottom: 8px;
+}
+.bcfm-dropzone {
+	padding: 8px 10px;
+	border: 1px dashed var(--colortopbordertitle1, #ccc);
+	border-radius: 4px;
+}
+.bcfm-filter {
+	margin: 6px 0;
+}
+
+/* List */
+.bcfm-list .bcfm-perms {
+	font-family: monospace;
+}
+.bcfm-list .bcfm-actions a {
+	opacity: 0.75;
+}
+.bcfm-list .bcfm-actions a:hover {
+	opacity: 1;
+}
+.bcfm-delete {
+	color: #a33;
+}
+.bcfm-footer {
+	margin-top: 6px;
+	word-break: break-all;
+}
+
+/* Editor / viewer */
+.bcfm-fileinfo {
+	margin-bottom: 8px;
+}
+.bcfm-savebar {
+	margin-bottom: 6px;
+}
+.bcfm-textarea,
+.bcfm-editor {
+	width: 100%;
+	height: calc(100vh - 260px);
+	min-height: 300px;
+	box-sizing: border-box;
+	border: 1px solid var(--colortopbordertitle1, #ccc);
+	border-radius: 4px;
+}
+.bcfm-textarea {
+	font-family: monospace;
+	font-size: 13px;
+	white-space: pre;
+	tab-size: 4;
+}
+.bcfm-preview {
+	margin: 10px 0;
+}
+.bcfm-preview img {
+	max-width: 100%;
+	max-height: 70vh;
+	background: repeating-conic-gradient(#ddd 0% 25%, #fff 0% 50%) 50% / 16px 16px;
+	border: 1px solid #ccc;
+}
+.bcfm-pdf {
+	width: 100%;
+	height: 75vh;
+	border: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 767px) {
+	.bcfm-layout {
+		flex-direction: column;
+	}
+	.bcfm-tree {
+		flex-basis: auto;
+		width: 100%;
+		box-sizing: border-box;
+		position: static;
+		max-height: 200px;
+	}
+}
